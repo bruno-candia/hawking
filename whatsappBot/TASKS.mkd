@@ -1,0 +1,118 @@
+# Lista de Tarefas para o Projeto AutoClock
+
+## 1. Configuração Inicial do Projeto
+
+1. **Inicialização do Projeto** DONE
+
+   - [x] Inicializar o projeto Node.js com `npm init -y`.
+   - [x] Configurar TypeScript no projeto (`tsconfig.json`).
+   - [x] Instalar dependências essenciais: `typescript`, `ts-node`, `express`, `mongoose`, `dotenv`, `nodemon`.
+
+2. **Estruturação do Projeto**
+
+   - [x] Criar a estrutura de diretórios:
+     - `src/`
+       - `controllers/`
+       - `models/`
+       - `routes/`
+       - `services/`
+       - `utils/`
+       - `config/`
+       - `middleware/`
+       - `types/`
+     - `tests/`
+
+3. **Configuração do Ambiente de Desenvolvimento**
+   - [x] Configurar scripts no `package.json` para facilitar o desenvolvimento (`start`, `dev`, `build`).
+   - [x] Configurar ESLint e Prettier para garantir a qualidade do código.
+   - [x] Criar arquivo `.env` para variáveis de ambiente (configuração do MongoDB, API keys, etc).
+
+## 2. Desenvolvimento da API
+
+1. **Configuração do Servidor**
+
+   - [x] Configurar o servidor Express básico em `src/index.ts`.
+   - [ ] Configurar conexão com o MongoDB em `src/config/db.ts`.
+
+2. **Modelos e Schemas**
+
+   - [ ] Criar o modelo de Usuário (`User`) em `src/models/User.ts`.
+   - [ ] Criar o modelo de Registro de Ponto (`Attendance`) em `src/models/Attendance.ts`.
+
+3. **Controladores**
+
+   - [ ] Implementar controlador de Usuários (`src/controllers/userController.ts`).
+   - [ ] Implementar controlador de Registro de Ponto (`src/controllers/attendanceController.ts`).
+
+4. **Serviços**
+
+   - [ ] Implementar serviço para gerar horários randômicos (`src/services/scheduleService.ts`).
+   - [ ] Implementar serviço para enviar mensagens via WhatsApp (`src/services/whatsappService.ts`).
+   - [ ] Implementar serviço para bater ponto no site (`src/services/punchClockService.ts`).
+
+5. **Rotas**
+
+   - [ ] Configurar rotas de Usuários (`src/routes/userRoutes.ts`).
+   - [ ] Configurar rotas de Registro de Ponto (`src/routes/attendanceRoutes.ts`).
+
+6. **Middlewares**
+   - [ ] Implementar middleware para tratamento de erros (`src/middleware/errorHandler.ts`).
+
+## 3. Funcionalidades Específicas
+
+1. **Geração Automática de Horários**
+
+   - [ ] Implementar função para gerar horários de entrada e saída diariamente à meia-noite.
+   - [ ] Agendar a execução diária usando `node-cron`.
+
+2. **Integração com WhatsApp**
+
+   - [ ] Implementar envio de mensagens via WhatsApp com as opções "Sim", "Adiar" e "Não".
+   - [ ] Implementar lógica para reagir às respostas dos usuários.
+
+3. **Automação de Bater Ponto**
+
+   - [ ] Implementar função para acessar o site do ponto, realizar login e bater o ponto.
+   - [ ] Salvar registros de ponto no MongoDB.
+
+4. **Funcionalidade de Adiar**
+   - [ ] Implementar lógica para adiar a tentativa de bater ponto e reexecutar no horário especificado pelo usuário.
+
+## 4. Testes
+
+1. **Testes Unitários**
+
+   - [ ] Escrever testes unitários para serviços e controladores usando `Jest`.
+
+2. **Testes de Integração**
+   - [ ] Escrever testes de integração para rotas da API.
+
+## 5. Documentação
+
+1. **Documentação do Código**
+
+   - [ ] Documentar funções e classes usando JSDoc ou TypeDoc.
+
+2. **Documentação da API**
+
+   - [ ] Criar documentação da API utilizando Swagger ou outra ferramenta similar.
+   - [ ] Incluir exemplos de requisições e respostas para cada endpoint.
+
+3. **Guia de Configuração e Uso**
+   - [ ] Escrever guia de configuração do projeto no arquivo `README.md`.
+   - [ ] Incluir instruções para configuração do ambiente, execução do projeto e testes.
+
+## 6. Preparação para Produção
+
+1. **Configuração de Variáveis de Ambiente**
+
+   - [ ] Configurar variáveis de ambiente para produção.
+
+2. **Deploy**
+
+   - [ ] Configurar Docker para containerização da aplicação.
+   - [ ] Configurar CI/CD para deploy automático (usando GitHub Actions).
+
+3. **Monitoramento e Logs**
+   - [ ] Implementar monitoramento da aplicação (utilizando ferramentas como PM2 ou similares).
+   - [ ] Configurar logging para registro de atividades e erros.
